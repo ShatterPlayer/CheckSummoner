@@ -1,0 +1,26 @@
+.paralax{
+    height: 650px;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+    &__text{
+        text-align: center;
+        margin-top: 260px;
+        font-size: 40px;
+        color: $main-text-color;
+        text-shadow: 0 0 50px $main-text-color;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        opacity: 0;
+
+        &--sub{
+            font-size: 22px;
+            margin: 0;
+        }
+    }
+}
