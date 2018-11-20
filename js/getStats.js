@@ -3,7 +3,7 @@ $(function() {
     $('.form__submit').click(function() {
         var server = $('.form__server').html();
         $.ajax({
-            url: 'http://shatterplayer.rf.gd/',
+            url: 'https://shatterplayer.rf.gd/',
             method: 'POST',
             dataType: 'JSON',
             data: {
