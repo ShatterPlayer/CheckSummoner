@@ -3,7 +3,7 @@ $(function() {
     $('.form__submit').click(function() {
         var server = $('.form__server').html();
         $.ajax({
-            url: 'https://shatterplayer.rf.gd/',
+            url: 'https://api.checksummoner.ml',
             method: 'POST',
             dataType: 'JSON',
             data: {
@@ -12,7 +12,7 @@ $(function() {
             },
         
             success: function(res) {
-                console.log(res);
+                console.log(res.responseJSON);
             },
         
             error: function(res) {
