@@ -12,12 +12,13 @@ $(function() {
             },
         
             success: function(res) {
-                console.log(res.responseJSON);
+                console.log(res);
             },
         
             error: function(res) {
-                console.log(res.responseJSON.message);
+                console.log(res);
             }
         });
     });
 });
+//FIXME: Error wykonuje się w złym momencie
