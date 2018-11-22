@@ -12,11 +12,11 @@ $(function() {
             },
         
             success: function(res) {
-                alert(res.responseText);
+                console.log(res.responseJSON);
             },
         
             error: function(res) {
-                alert(res.responseText);
+                alert(res.responseJSON);
             }
         });
     });
