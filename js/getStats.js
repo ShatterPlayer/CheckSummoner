@@ -1,7 +1,7 @@
 function getStats(){
     var server = $('.form__server').html();
     $.ajax({
-        url: 'api.checksummoner.ml',
+        url: 'https://api.checksummoner.ml',
         method: 'POST',
         dataType: 'JSON',
         data: {
