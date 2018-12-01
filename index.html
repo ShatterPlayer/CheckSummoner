@@ -11,7 +11,7 @@
  |____/ \__,_|_| |_| |_|_| |_| |_|\___/|_| |_|\___|_|   
                                                                 
 -->
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,10 +25,10 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     
-    <script src="js/form__server.js" type="text/javascript"></script>
-    <script src="js/getStats.js" type="text/javascript"></script>
+    <script src="js/form__server.js" type="text/javascript" async defer></script>
+    <script src="js/getStats.js" type="text/javascript" async defer></script>
 
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </head>
 <body onselectstart="return false">
@@ -47,11 +47,19 @@
             <h1 class="params__text">Summoner Details</h1>
             
             <div class="form">
-                <input class="form__name" type="text" autocomplete="off" placeholder="NAME" onfocus="this.placeholder=''" onblur="this.placeholder='NAME'">   
-                <div class="form__server">
-                    <div class="form__caret-down"></div>
-                </div>
-                <button class="form__submit g-recaptcha" data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc" data-callback="getStats">CHECK!</button>
+                <label>
+                    <input class="form__name" type="text" autocomplete="off" placeholder="NAME" onfocus="this.placeholder=''" onblur="this.placeholder='NAME'">  
+                </label> 
+
+                <label>
+                    <div class="form__server">
+                        <div class="form__caret-down"></div>
+                    </div>
+                </label>
+
+                <label>
+                    <button class="form__submit g-recaptcha" data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc" data-callback="getStats">CHECK!</button>
+                </label>
             </div>
 
             <div class="servers">
@@ -69,8 +77,8 @@
                 <div class="servers__item" data-server="STOP"><i class="fas fa-angle-right"></i></div>
             </div>
 
-            <img class="params__image-left" src="img/dariusblue.png">
-            <img class="params__image-right" src="img/dariusred.png">
+            <img class="params__image-left" src="img/dariusblue.png" alt="dariusblue">
+            <img class="params__image-right" src="img/dariusred.png" alt="dariusred">
         </div>
     </main>
     
