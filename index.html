@@ -27,6 +27,8 @@
     
     <script src="js/form__server.js" type="text/javascript"></script>
     <script src="js/getStats.js" type="text/javascript"></script>
+
+    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
     
 </head>
 <body onselectstart="return false">
@@ -45,11 +47,11 @@
             <h1 class="params__text">Summoner Details</h1>
             
             <div class="form">
-                <input class="form__nick" type="text" autocomplete="off" placeholder="NICKNAME" onfocus="this.placeholder=''" onblur="this.placeholder='NICKNAME'">   
+                <input class="form__name" type="text" autocomplete="off" placeholder="NAME" onfocus="this.placeholder=''" onblur="this.placeholder='NAME'">   
                 <div class="form__server">
                     <div class="form__caret-down"></div>
                 </div>
-                <button class="form__submit">CHECK!</button>
+                <button class="form__submit g-recaptcha" data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc" data-callback="getStats">CHECK!</button>
             </div>
 
             <div class="servers">

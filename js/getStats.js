@@ -1,24 +1,21 @@
-$(function() {
+function getStats(){
+    var server = $('.form__server').html();
+    $.ajax({
+        url: 'api.checksummoner.ml',
+        method: 'POST',
+        dataType: 'JSON',
+        data: {
+            name: $('.form__name').val(),
+            server: $(`.servers__item[data-server="${server}"]`).data(`endpoint`),
+            recaptcha: grecaptcha.getResponse()
+        },
     
-    $('.form__submit').click(function() {
-        var server = $('.form__server').html();
-        $.ajax({
-            url: 'https://api.checksummoner.ml',
-            method: 'POST',
-            dataType: 'JSON',
-            data: {
-                nick: $('.form__nick').val(),
-                server: $('.servers__item[data-server="'+server+'"]').data('endpoint')
-            },
-        
-            success: function(res) {
-                console.log(res);
-            },
-        
-            error: function(res) {
-                console.log(res);
-            }
-        });
+        success: function(res) {
+            console.log(res);
+        },
+    
+        error: function(res) {
+            console.log(res);
+        }
     });
-});
-//FIXME: Error wykonuje się w złym momencie
+}
