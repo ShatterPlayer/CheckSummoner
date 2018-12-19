@@ -1,21 +1,35 @@
-$bg-color: #000F08;
+/* Background pattern from Toptal Subtle Patterns */
+$bg-color: #000f08;
 $main-text-color: #fff;
-$form-input-color: #fff; 
-$green: #139A43;
-$blue: #001F86;
-$red: #BC0000;
+$form-input-color: #fff;
+$green: #139a43;
+$blue: #001f86;
+$red: #bc0000;
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Noto Sans', sans-serif;
-    background-color: $bg-color;
-    cursor: default;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  background-color: $bg-color;
+  cursor: default;
+  overflow-x: hidden;
+  position: relative;
+  background-image: url("../img/stats_bg.png");
 }
-/* Global styles */
-@import 'fadein';
-@import 'logo';
 
-/*Home Styles */
-@import 'home/paralax';
-@import 'home/params';
+/* Global styles */
+@import "fadein";
+@import "logo";
+@import "change";
+
+/* Home Styles */
+@import "home/paralax_blocks/paralax";
+@import "home/params_blocks/params";
+
+/* Stats Styles */
+@import "stats/player";
+@import "stats/wrappers";
+@import "stats/rank";
+@import "stats/mastery";
+@import "stats/match";
+@import "stats/line";

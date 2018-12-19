@@ -1,0 +1,52 @@
+.params {
+	height: 100vh;
+	overflow: auto;
+	position: relative;
+
+	&__text {
+		color: $main-text-color;
+		text-align: center;
+		font-size: 43px;
+		margin-top: 250px;
+		text-shadow: 0 0 40px $main-text-color;
+	}
+
+	%darius-images {
+		width: 150px;
+		position: absolute;
+		top: 250px;
+	}
+
+	&__image-left {
+		@extend %darius-images;
+		left: 10%;
+	}
+
+	&__image-right {
+		@extend %darius-images;
+		right: 10%;
+	}
+}
+
+%input_style {
+	background: none;
+	color: $form-input-color;
+	border: 2px solid $form-input-color;
+	box-shadow: 0 0 10px $form-input-color;
+	outline: none;
+	font-weight: 900;
+	font-size: 18px;
+	margin: 2px;
+	transition: 0.2s ease-in-out;
+	height: 50px;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+
+@import "form";
+@import "servers";
+
+::placeholder {
+	color: $form-input-color;
+	opacity: 1;
+}

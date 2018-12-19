@@ -1,91 +1,172 @@
 <!DOCTYPE html>
 <!--
-   ____ _               _                               
-  / ___| |__   ___  ___| | __                           
- | |   | '_ \ / _ \/ __| |/ /                           
- | |___| | | |  __/ (__|   <                            
-  \____|_| |_|\___|\___|_|\_\                           
- / ___| _   _ _ __ ___  _ __ ___   ___  _ __   ___ _ __ 
- \___ \| | | | '_ ` _ \| '_ ` _ \ / _ \| '_ \ / _ \ '__|
-  ___) | |_| | | | | | | | | | | | (_) | | | |  __/ |   
- |____/ \__,_|_| |_| |_|_| |_| |_|\___/|_| |_|\___|_|   
-                                                                
+	  ____ _               _
+	 / ___| |__   ___  ___| | __
+	| |   | '_ \ / _ \/ __| |/ /
+	| |___| | | |  __/ (__|   <
+	 \____|_| |_|\___|\___|_|\_\
+	/ ___| _   _ _ __ ___  _ __ ___   ___  _ __   ___ _ __
+	\___ \| | | | '_ ` _ \| '_ ` _ \ / _ \| '_ \ / _ \ '__|
+	 ___) | |_| | | | | | | | | | | | (_) | | | |  __/ |
+	|____/ \__,_|_| |_| |_|_| |_| |_|\___/|_| |_|\___|_|
 -->
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>CheckSummoner - League of Legends Players Statistics</title>
-    <meta name="description" content="Check stats of League of Legends players from around the world - quickly and without any problems. CheckSummoner is an extremely easy to use page that allows you to check the statistics of a given player.">
-    <meta name="keywords" content="league, legends, lol, match, summoner, stats, check, summoner, checksummoner, ga, ml, ShatterPlayer, mastery, masteries, ranked">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/main.css" >
+		<title>CheckSummoner - League of Legends Players Statistics</title>
+		<meta
+			name="description"
+			content="Check stats of League of Legends players from around the world - quickly and without any problems. CheckSummoner is an extremely easy to use page that allows you to check the statistics of a given player."
+		/>
+		<meta
+			name="keywords"
+			content="league, legends, lol, match, summoner, stats, check, summoner, checksummoner, ga, ml, ShatterPlayer, mastery, masteries, ranked"
+		/>
 
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link
+			href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=latin-ext"
+			rel="stylesheet"
+		/>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
-    <script src="js/form__server.js" type="text/javascript" async defer></script>
-    <script src="js/getStats.js" type="text/javascript" async defer></script>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+			integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+			crossorigin="anonymous"
+		/>
 
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    
-    <meta name="google-site-verification" content="jsrsZYCieObOzCrytRKdNk5a-mWP0N6QZvrIZx-pI2w">
-</head>
-<body onselectstart="return false">
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			crossorigin="anonymous"
+		></script>
 
-    <header>
-        <div class="logo"></div>
-    </header>
+		<script
+			src="js/form__server.js"
+			type="text/javascript"
+			async
+			defer
+		></script>
+		<script src="js/CSAPI.js" type="text/javascript"></script>
 
-    <main>
-        <div class="paralax">
-            <h1 class="paralax__text fadein">League of Legends Players Statistics</h1>
-            <h1 class="paralax__text paralax__text--sub fadein-delay">Straight from the official game servers</h1>
-        </div>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
-        <div class="params">
-            <h1 class="params__text">Summoner Details</h1>
-            
-            <div class="form">
-                <label>
-                    <input class="form__name" type="text" autocomplete="off" placeholder="NAME" onfocus="this.placeholder=''" onblur="this.placeholder='NAME'">  
-                </label> 
+		<meta
+			name="google-site-verification"
+			content="jsrsZYCieObOzCrytRKdNk5a-mWP0N6QZvrIZx-pI2w"
+		/>
+	</head>
+	<body onselectstart="return false">
+		<header><div class="logo"></div></header>
 
-                <label>
-                    <div class="form__server">
-                        <div class="form__caret-down"></div>
-                    </div>
-                </label>
+		<main>
+			<div class="paralax">
+				<h1 class="paralax__text fadein">
+					League of Legends Players Statistics
+				</h1>
+				<h1 class="paralax__text paralax__text--sub fadein-delay">
+					Straight from the official game servers
+				</h1>
+			</div>
 
-                <label>
-                    <button class="form__submit g-recaptcha" data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc" data-callback="getStats">CHECK!</button>
-                </label>
-            </div>
+			<div class="params">
+				<h1 class="params__text">Summoner Details</h1>
 
-            <div class="servers">
-                <div class="servers__item" data-server="NA" data-endpoint="na1">North America</div>
-                <div class="servers__item" data-server="EUNE" data-endpoint="eun1">Europe North East</div>
-                <div class="servers__item" data-server="EUW" data-endpoint="euw1">Europe West</div>
-                <div class="servers__item" data-server="OCE" data-endpoint="oc1">Oceania</div>
-                <div class="servers__item" data-server="LAN" data-endpoint="la1">Latin America North</div>
-                <div class="servers__item" data-server="LAS" data-endpoint="la2">Latin America South</div>
-                <div class="servers__item" data-server="BR" data-endpoint="br1">Brazil</div>
-                <div class="servers__item" data-server="JP" data-endpoint="jp1">Japan</div>
-                <div class="servers__item" data-server="KR" data-endpoint="kr">Republic of Korea</div>
-                <div class="servers__item" data-server="TR" data-endpoint="tr1">Turkey</div>
-                <div class="servers__item" data-server="RU" data-endpoint="ru">Russia</div>
-                <div class="servers__item" data-server="STOP"><i class="fas fa-angle-right"></i></div>
-            </div>
+				<div class="form">
+					<label>
+						<input
+							class="form__name"
+							type="text"
+							autocomplete="off"
+							placeholder="NAME"
+							onfocus="this.placeholder=''"
+							onblur="this.placeholder='NAME'"
+						/>
+					</label>
 
-            <img class="params__image-left" src="img/dariusblue.png" alt="dariusblue">
-            <img class="params__image-right" src="img/dariusred.png" alt="dariusred">
-        </div>
-    </main>
-    
-</body>
+					<label>
+						<div class="form__server"><div class="form__caret-down"></div></div>
+					</label>
+
+					<label>
+						<button class="form__submit" onclick="submit()">CHECK!</button>
+					</label>
+
+					<div class="form__error"></div>
+
+					<div class="form__overlay"></div>
+
+					<div
+						class="g-recaptcha"
+						data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc"
+						data-callback="getStats"
+						data-size="invisible"
+					></div>
+				</div>
+
+				<div class="servers">
+					<div class="servers__item" data-server="NA" data-endpoint="na1">
+						North America
+					</div>
+					<div class="servers__item" data-server="EUNE" data-endpoint="eun1">
+						Europe North East
+					</div>
+					<div class="servers__item" data-server="EUW" data-endpoint="euw1">
+						Europe West
+					</div>
+					<div class="servers__item" data-server="OCE" data-endpoint="oc1">
+						Oceania
+					</div>
+					<div class="servers__item" data-server="LAN" data-endpoint="la1">
+						Latin America North
+					</div>
+					<div class="servers__item" data-server="LAS" data-endpoint="la2">
+						Latin America South
+					</div>
+					<div class="servers__item" data-server="BR" data-endpoint="br1">
+						Brazil
+					</div>
+					<div class="servers__item" data-server="JP" data-endpoint="jp1">
+						Japan
+					</div>
+					<div class="servers__item" data-server="KR" data-endpoint="kr">
+						Republic of Korea
+					</div>
+					<div class="servers__item" data-server="TR" data-endpoint="tr1">
+						Turkey
+					</div>
+					<div class="servers__item" data-server="RU" data-endpoint="ru">
+						Russia
+					</div>
+					<div class="servers__item" data-server="STOP">
+						<i class="fas fa-angle-right"></i>
+					</div>
+				</div>
+
+				<img
+					class="params__image-left"
+					src="img/dariusblue.png"
+					alt="dariusblue"
+				/>
+				<img
+					class="params__image-right"
+					src="img/dariusred.png"
+					alt="dariusred"
+				/>
+			</div>
+		</main>
+
+		<div class="change"></div>
+
+		<!--
+			<script>
+				$("main").load("stats.html");
+			</script>
+		-->
+	</body>
 </html>
