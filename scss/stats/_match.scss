@@ -1,0 +1,39 @@
+.match {
+	// flex-basis: calc(50%-10px);
+	margin: 5px;
+	width: 500px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__info {
+		padding: 0 20px;
+	}
+
+	&__text {
+		display: block;
+		color: white;
+		font-weight: 900;
+		font-size: 19px;
+
+		&--nothing {
+			width: 100%;
+			text-align: center;
+			font-size: 30px;
+		}
+
+		&--champ {
+			font-size: 27px;
+		}
+
+		&--lane {
+			color: $red;
+		}
+
+		&--time {
+			color: $green;
+			width: 160px;
+		}
+	}
+}

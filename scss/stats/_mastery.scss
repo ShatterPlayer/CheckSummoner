@@ -1,0 +1,42 @@
+.mastery {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: calc(100% / 3);
+
+	&:hover &__text--lvl {
+		opacity: 0;
+	}
+
+	&:hover &__text--points {
+		opacity: 1;
+	}
+
+	&__img {
+		border-radius: 5px;
+		width: 140px;
+	}
+
+	&__text {
+		font-weight: 900;
+		color: white;
+		font-size: 22px;
+		transition: opacity 0.3s ease-in-out;
+
+		&--lvl {
+			font-size: 15px;
+			color: $green;
+			opacity: 1;
+		}
+
+		&--points {
+			font-size: 15px;
+			color: $blue;
+			display: block;
+			position: relative;
+			bottom: 20px;
+			opacity: 0;
+		}
+	}
+}

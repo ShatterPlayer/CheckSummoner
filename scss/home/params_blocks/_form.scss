@@ -1,0 +1,112 @@
+.form {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+
+	&__name {
+		padding: 5px;
+		width: 72%;
+		text-align: center;
+		float: left;
+		@extend %input_style;
+
+		&:focus,
+		&:hover {
+			box-shadow: 0 0 20px $form-input-color;
+		}
+	}
+
+	&__server {
+		width: 24%;
+		float: left;
+		line-height: 46px;
+		padding-left: 15px;
+		margin-left: 10px;
+		position: relative;
+		@extend %input_style;
+
+		&::after {
+			content: "\f0d7";
+			font-family: "Font Awesome 5 Free";
+			float: right;
+			padding-right: 10px;
+		}
+
+		&:focus,
+		&:hover {
+			box-shadow: 0 0 20px $form-input-color;
+		}
+	}
+
+	&__submit {
+		margin-top: 8px;
+		width: calc(100% - 4px);
+		position: relative;
+		overflow: hidden;
+		transition-property: box-shadow, border;
+		@extend %input_style;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $green;
+			height: 300px;
+			width: 300px;
+			transform: rotate(45deg);
+			transition: 0.2s linear;
+			transition-property: top, left, right;
+			z-index: -1;
+		}
+
+		&::before {
+			top: -100px;
+			left: -360px;
+		}
+
+		&::after {
+			top: -160px;
+			right: -360px;
+		}
+
+		&:focus::before,
+		&:hover::before {
+			left: -142px;
+		}
+
+		&:focus::after,
+		&:hover::after {
+			right: -127px;
+		}
+
+		&:focus,
+		&:hover {
+			border: 2px solid $green;
+			box-shadow: 0 0 30px $green;
+		}
+
+		&--clicked {
+			background-color: $green;
+			border: 2px solid $green;
+			box-shadow: 0 0 30px $green;
+		}
+	}
+
+	&__error {
+		color: $red;
+		font-weight: 900;
+		text-align: center;
+		font-size: 22px;
+		margin-top: 10px;
+	}
+
+	&__overlay {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}
