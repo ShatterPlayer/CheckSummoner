@@ -33,6 +33,7 @@ function league(ranked, index) {
 		"src",
 		"img/" + ranked.tier.toLowerCase() + ".png"
 	);
+
 	$("#js-rtier" + index).html(ranked.tier + " " + ranked.rank);
 	$("#js-rwins" + index).html("Wins: " + ranked.wins);
 	$("#js-rloses" + index).html("Loses: " + ranked.losses);
