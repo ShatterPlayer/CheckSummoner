@@ -83,46 +83,49 @@ function success(res) {
 
 				//Display mastery info
 				var i = 0;
-				res.mastery.forEach(function(m) {
-					$("#js-mimg" + i).attr(
-						"src",
-						"https://ddragon.leagueoflegends.com/cdn/" +
-							res.version +
-							"/img/champion/" +
-							m.id +
-							".png"
-					);
+				if (res.mastery) {
+					res.mastery.forEach(function(m) {
+						$("#js-mimg" + i).attr(
+							"src",
+							"https://ddragon.leagueoflegends.com/cdn/" +
+								res.version +
+								"/img/champion/" +
+								m.id +
+								".png"
+						);
 
-					$("#js-mname" + i).html(m.name);
-					$("#js-mlvl" + i).html("Level " + m.lvl);
-					$("#js-mpoints" + i).html("Points " + m.points);
+						$("#js-mname" + i).html(m.name);
+						$("#js-mlvl" + i).html("Level " + m.lvl);
+						$("#js-mpoints" + i).html("Points " + m.points);
 
-					i++;
-				});
-
-				//Display matches info
-				if (res.match == "undefined") {
-					$("#js-matchwrapper").html(
-						'<span class="match__text">No matches found</span>'
-					);
+						i++;
+					});
 				}
 
-				res.match.forEach(function(match) {
-					var newMatch =
-						'<div class="match"><img class="match__img" src="http://ddragon.leagueoflegends.com/cdn/' +
-						res.version +
-						"/img/champion/" +
-						match.champId +
-						'.png" alt="match" /><div class="match__info"><span class="match__text match__text--champ">' +
-						match.champName +
-						'</span><span class="match__text match__text--lane">Lane: ' +
-						match.lane +
-						'</span></div><span class="match__text match__text--time">' +
-						timestamp_to_time_ago(match.timestamp) +
-						"</span></div>";
+				//Display matches info
 
-					$("#js-matchwrapper").html($("#js-matchwrapper").html() + newMatch);
-				});
+				if (res.match) {
+					res.match.forEach(function(match) {
+						var newMatch =
+							'<div class="match"><img class="match__img" src="https://ddragon.leagueoflegends.com/cdn/' +
+							res.version +
+							"/img/champion/" +
+							match.champId +
+							'.png" alt="match" /><div class="match__info"><span class="match__text match__text--champ">' +
+							match.champName +
+							'</span><span class="match__text match__text--lane">Lane: ' +
+							match.lane +
+							'</span></div><span class="match__text match__text--time">' +
+							timestamp_to_time_ago(match.timestamp) +
+							"</span></div>";
+
+						$("#js-matchwrapper").html($("#js-matchwrapper").html() + newMatch);
+					});
+				} else {
+					$("#js-matchwrapper").html(
+						'<span class="match__text match__text--nothing">No matches found</span>'
+					);
+				}
 
 				//End animation
 				$(".change").animate(
