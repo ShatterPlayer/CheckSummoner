@@ -140,18 +140,18 @@ function success(res) {
 }
 
 function error(res) {
-	console.log(res);
 	grecaptcha.reset();
 	$(".form__submit").removeClass("form__submit--clicked");
 	$(".form__submit").html("CHECK!");
 	$(".form__overlay").removeAttr("style");
-	$(".form__error").html(res.responseText);
+	if (!res) $(".form__error").html("No internet connection");
+	else $(".form__error").html(res.responseText);
 }
 
 function getStats() {
 	var server = $(".form__server").html();
 	$.ajax({
-		url: "https://api.checksummoner.ml",
+		url: "CS-API/index.php",
 		method: "POST",
 		dataType: "JSON",
 		data: {

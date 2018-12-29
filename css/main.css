@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans", sans-serif;
-  background-color: #000f08;
+  background-color: #070707;
   cursor: default;
   overflow-x: hidden;
   position: relative;
@@ -54,6 +54,13 @@ body {
   height: 100px;
 }
 
+@media only screen and (max-width: 680px) {
+  .logo {
+    background-image: url("../img/bannermobile.png");
+    height: 60px;
+  }
+}
+
 .change {
   width: 100%;
   height: 100%;
@@ -68,6 +75,25 @@ body {
           animation: change .3s forwards linear;
 }
 
+.footer {
+  width: 100%;
+  height: 5vh;
+  background-color: #070707;
+  color: white;
+  text-align: center;
+  line-height: 5vh;
+}
+
+.footer__redtext {
+  color: #bc0000;
+  font-weight: 900;
+}
+
+.footer__bluetext {
+  color: #001f86;
+  font-weight: 900;
+}
+
 /* Home Styles */
 .paralax {
   height: 650px;
@@ -75,13 +101,23 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  position: relative;
-  overflow: hidden;
+  overflow: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .paralax__text {
   text-align: center;
-  margin-top: 260px;
   font-size: 40px;
   color: #fff;
   text-shadow: 0 0 50px #fff;
@@ -92,11 +128,24 @@ body {
 
 .paralax__text--sub {
   font-size: 22px;
-  margin: 0;
+}
+
+@media only screen and (max-width: 680px) {
+  .paralax {
+    height: 500px;
+  }
+  .paralax__text {
+    margin-top: 175px;
+    font-size: 30px;
+  }
+  .paralax__text--sub {
+    font-size: 14px;
+    margin: 0;
+  }
 }
 
 .params {
-  height: 100vh;
+  height: 95vh;
   overflow: auto;
   position: relative;
 }
@@ -293,6 +342,16 @@ body {
 ::placeholder {
   color: #fff;
   opacity: 1;
+}
+
+@media only screen and (max-width: 680px) {
+  .params__image-left,
+  .params__image-right {
+    display: none;
+  }
+  .params__text {
+    font-size: 32px;
+  }
 }
 
 /* Stats Styles */

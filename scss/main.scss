@@ -1,5 +1,5 @@
 /* Background pattern from Toptal Subtle Patterns */
-$bg-color: #000f08;
+$bg-color: #070707;
 $main-text-color: #fff;
 $form-input-color: #fff;
 $green: #139a43;
@@ -7,20 +7,21 @@ $blue: #001f86;
 $red: #bc0000;
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: "Noto Sans", sans-serif;
-  background-color: $bg-color;
-  cursor: default;
-  overflow-x: hidden;
-  position: relative;
-  background-image: url("../img/stats_bg.png");
+	margin: 0;
+	padding: 0;
+	font-family: "Noto Sans", sans-serif;
+	background-color: $bg-color;
+	cursor: default;
+	overflow-x: hidden;
+	position: relative;
+	background-image: url("../img/stats_bg.png");
 }
 
 /* Global styles */
 @import "fadein";
 @import "logo";
 @import "change";
+@import "footer";
 
 /* Home Styles */
 @import "home/paralax_blocks/paralax";

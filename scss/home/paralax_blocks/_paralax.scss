@@ -1,26 +1,42 @@
-.paralax{
-    height: 650px;
-    background-image: url("../img/bg.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+.paralax {
+	height: 650px;
+	background-image: url("../img/bg.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
 
-    &__text{
-        text-align: center;
-        margin-top: 260px;
-        font-size: 40px;
-        color: $main-text-color;
-        text-shadow: 0 0 50px $main-text-color;
-        text-transform: uppercase;
-        font-weight: 900;
+	&__text {
+		text-align: center;
+		font-size: 40px;
+		color: $main-text-color;
+		text-shadow: 0 0 50px $main-text-color;
+		text-transform: uppercase;
+		font-weight: 900;
 
-        opacity: 0;
+		opacity: 0;
 
-        &--sub{
-            font-size: 22px;
-            margin: 0;
-        }
-    }
+		&--sub {
+			font-size: 22px;
+		}
+	}
+}
+@media only screen and (max-width: 680px) {
+	.paralax {
+		height: 500px;
+
+		&__text {
+			margin-top: 175px;
+			font-size: 30px;
+
+			&--sub {
+				font-size: 14px;
+				margin: 0;
+			}
+		}
+	}
 }

@@ -1,7 +1,14 @@
-.logo{
-    background-image: url('../img/banner.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    height: 100px;
+.logo {
+	background-image: url("../img/banner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+
+	height: 100px;
+}
+
+@media only screen and (max-width: 680px) {
+	.logo {
+		background-image: url("../img/bannermobile.png");
+		height: 60px;
+	}
 }

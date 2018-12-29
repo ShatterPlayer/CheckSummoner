@@ -147,7 +147,10 @@
 				<h1 class="paralax__text fadein">
 					League of Legends Players Statistics
 				</h1>
-				<h1 class="paralax__text paralax__text--sub fadein-delay">
+				<h1
+					class="paralax__text paralax__text--sub fadein-delay"
+					data-depth="0.6"
+				>
 					Straight from the official game servers
 				</h1>
 			</div>
@@ -184,6 +187,7 @@
 						data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc"
 						data-callback="getStats"
 						data-size="invisible"
+						data-error-callback="error"
 					></div>
 				</div>
 
@@ -238,6 +242,14 @@
 				/>
 			</div>
 		</main>
+
+		<footer>
+			<div class="footer">
+				<span class="footer__redtext">Check</span
+				><span class="footer__bluetext">Summoner</span> &copy; - League of
+				Legends Players Statistics
+			</div>
+		</footer>
 
 		<div class="change"></div>
 
