@@ -158,88 +158,92 @@
 			<div class="params">
 				<h1 class="params__text">Summoner Details</h1>
 
-				<div class="form">
-					<label>
-						<input
-							class="form__name"
-							type="text"
-							autocomplete="off"
-							placeholder="NAME"
-							onfocus="this.placeholder=''"
-							onblur="this.placeholder='NAME'"
-						/>
-					</label>
+				<div class="params__flex-wrapper">
+					<div class="form">
+						<label>
+							<input
+								class="form__name"
+								type="text"
+								autocomplete="off"
+								placeholder="NAME"
+								onfocus="this.placeholder=''"
+								onblur="this.placeholder='NAME'"
+							/>
+						</label>
 
-					<label>
-						<div class="form__server"><div class="form__caret-down"></div></div>
-					</label>
+						<label>
+							<div class="form__server">
+								<div class="form__caret-down"></div>
+							</div>
+						</label>
 
-					<label>
-						<button class="form__submit" onclick="submit()">CHECK!</button>
-					</label>
+						<label>
+							<button class="form__submit" onclick="submit()">CHECK!</button>
+						</label>
 
-					<div class="form__error"></div>
+						<div class="form__error"></div>
 
-					<div class="form__overlay"></div>
+						<div class="form__overlay"></div>
 
-					<div
-						class="g-recaptcha"
-						data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc"
-						data-callback="getStats"
-						data-size="invisible"
-						data-error-callback="error"
-					></div>
+						<div
+							class="g-recaptcha"
+							data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc"
+							data-callback="getStats"
+							data-size="invisible"
+							data-error-callback="error"
+						></div>
+					</div>
+
+					<div class="servers">
+						<div class="servers__item" data-server="NA" data-endpoint="na1">
+							North America
+						</div>
+						<div class="servers__item" data-server="EUNE" data-endpoint="eun1">
+							Europe North East
+						</div>
+						<div class="servers__item" data-server="EUW" data-endpoint="euw1">
+							Europe West
+						</div>
+						<div class="servers__item" data-server="OCE" data-endpoint="oc1">
+							Oceania
+						</div>
+						<div class="servers__item" data-server="LAN" data-endpoint="la1">
+							Latin America North
+						</div>
+						<div class="servers__item" data-server="LAS" data-endpoint="la2">
+							Latin America South
+						</div>
+						<div class="servers__item" data-server="BR" data-endpoint="br1">
+							Brazil
+						</div>
+						<div class="servers__item" data-server="JP" data-endpoint="jp1">
+							Japan
+						</div>
+						<div class="servers__item" data-server="KR" data-endpoint="kr">
+							Republic of Korea
+						</div>
+						<div class="servers__item" data-server="TR" data-endpoint="tr1">
+							Turkey
+						</div>
+						<div class="servers__item" data-server="RU" data-endpoint="ru">
+							Russia
+						</div>
+						<div class="servers__item" data-server="STOP">
+							<i class="fas fa-angle-right"></i>
+						</div>
+					</div>
+
+					<img
+						class="params__image-left"
+						src="img/dariusblue.png"
+						alt="dariusblue"
+					/>
+					<img
+						class="params__image-right"
+						src="img/dariusred.png"
+						alt="dariusred"
+					/>
 				</div>
-
-				<div class="servers">
-					<div class="servers__item" data-server="NA" data-endpoint="na1">
-						North America
-					</div>
-					<div class="servers__item" data-server="EUNE" data-endpoint="eun1">
-						Europe North East
-					</div>
-					<div class="servers__item" data-server="EUW" data-endpoint="euw1">
-						Europe West
-					</div>
-					<div class="servers__item" data-server="OCE" data-endpoint="oc1">
-						Oceania
-					</div>
-					<div class="servers__item" data-server="LAN" data-endpoint="la1">
-						Latin America North
-					</div>
-					<div class="servers__item" data-server="LAS" data-endpoint="la2">
-						Latin America South
-					</div>
-					<div class="servers__item" data-server="BR" data-endpoint="br1">
-						Brazil
-					</div>
-					<div class="servers__item" data-server="JP" data-endpoint="jp1">
-						Japan
-					</div>
-					<div class="servers__item" data-server="KR" data-endpoint="kr">
-						Republic of Korea
-					</div>
-					<div class="servers__item" data-server="TR" data-endpoint="tr1">
-						Turkey
-					</div>
-					<div class="servers__item" data-server="RU" data-endpoint="ru">
-						Russia
-					</div>
-					<div class="servers__item" data-server="STOP">
-						<i class="fas fa-angle-right"></i>
-					</div>
-				</div>
-
-				<img
-					class="params__image-left"
-					src="img/dariusblue.png"
-					alt="dariusblue"
-				/>
-				<img
-					class="params__image-right"
-					src="img/dariusred.png"
-					alt="dariusred"
-				/>
 			</div>
 		</main>
 

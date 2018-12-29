@@ -1,15 +1,29 @@
 .form {
 	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
 	position: relative;
+
+	&__name,
+	&__server,
+	&__submit {
+		background: none;
+		color: $form-input-color;
+		border: 2px solid $form-input-color;
+		box-shadow: 0 0 10px $form-input-color;
+		outline: none;
+		font-weight: 900;
+		font-size: 18px;
+		margin: 2px;
+		transition: 0.2s ease-in-out;
+		height: 50px;
+		box-sizing: border-box;
+		border-radius: 5px;
+	}
 
 	&__name {
 		padding: 5px;
-		width: 72%;
+		width: calc(73% - 4px);
 		text-align: center;
 		float: left;
-		@extend %input_style;
 
 		&:focus,
 		&:hover {
@@ -18,13 +32,11 @@
 	}
 
 	&__server {
-		width: 24%;
+		width: calc(27% - 8px);
 		float: left;
 		line-height: 46px;
 		padding-left: 15px;
-		margin-left: 10px;
-		position: relative;
-		@extend %input_style;
+		margin-left: 4px;
 
 		&::after {
 			content: "\f0d7";
@@ -45,7 +57,6 @@
 		position: relative;
 		overflow: hidden;
 		transition-property: box-shadow, border;
-		@extend %input_style;
 
 		&::before,
 		&::after {
@@ -108,5 +119,17 @@
 		height: 100%;
 		top: 0;
 		left: 0;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.form {
+		width: 340px;
+
+		&__name,
+		&__server,
+		&__submit {
+			font-size: 15px;
+		}
 	}
 }
