@@ -150,8 +150,11 @@ function error(res) {
 
 function getStats() {
 	var server = $(".form__server").html();
+	var gResp = grecaptcha.getResponse();
+	if (!gResp) error();
+
 	$.ajax({
-		url: "CS-API/index.php",
+		url: "https://api.checksummoner.ml",
 		method: "POST",
 		dataType: "JSON",
 		data: {
@@ -159,7 +162,7 @@ function getStats() {
 			server: $('.servers__item[data-server="' + server + '"]').data(
 				"endpoint"
 			),
-			recaptcha: grecaptcha.getResponse()
+			recaptcha: gResp
 		},
 
 		success: function(res) {
