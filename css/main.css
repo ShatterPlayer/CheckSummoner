@@ -254,7 +254,7 @@ body {
 }
 
 .form__server {
-  width: calc(27% - 8px);
+  width: calc(27% - 6px);
   float: left;
   line-height: 46px;
   padding-left: 15px;
@@ -368,10 +368,17 @@ body {
   width: calc(50% - 10px);
   float: left;
   font-size: 16px;
-  padding: 5px;
   margin: 5px;
+  padding: 6px;
   -webkit-box-shadow: 0 0 5px #fff;
           box-shadow: 0 0 5px #fff;
+}
+
+@media only screen and (max-width: 680px) {
+  .servers__item {
+    font-size: 13px;
+    padding: 8px;
+  }
 }
 
 ::-webkit-input-placeholder {
