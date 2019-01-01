@@ -7,7 +7,7 @@
 
 .rank {
 	@extend %flex;
-	width: calc(100% / 3);
+	flex: 1;
 	position: relative;
 
 	&__img {

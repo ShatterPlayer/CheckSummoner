@@ -1,9 +1,17 @@
 .wrapper0 {
-	height: 400px;
+	min-height: 400px;
 	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 18px 0;
+}
+
+@media only screen and (max-width: 700px) {
+	.wrapper0 {
+		flex-direction: column;
+		align-content: space-around;
+	}
 }
 
 .wrapper1 {

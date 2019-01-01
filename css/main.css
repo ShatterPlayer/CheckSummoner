@@ -136,7 +136,7 @@ body {
   font-size: 22px;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 700px) {
   .paralax {
     height: 500px;
   }
@@ -347,7 +347,7 @@ body {
   left: 0;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 700px) {
   .form {
     width: 340px;
   }
@@ -374,7 +374,7 @@ body {
           box-shadow: 0 0 5px #fff;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 700px) {
   .servers__item {
     font-size: 13px;
     padding: 8px;
@@ -401,7 +401,7 @@ body {
   opacity: 1;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 700px) {
   .params__image-left, .params__image-right {
     display: none;
   }
@@ -450,8 +450,25 @@ body {
   color: #139a43;
 }
 
+@media only screen and (max-width: 700px) {
+  .player {
+    height: 100px;
+  }
+  .player__icon {
+    height: 50px;
+    margin-right: 10px;
+  }
+  .player__nick {
+    font-size: 16px;
+  }
+  .player__lvl {
+    font-size: 15px;
+    margin-left: 15px;
+  }
+}
+
 .wrapper0 {
-  height: 400px;
+  min-height: 400px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -462,6 +479,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 18px 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .wrapper0 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: distribute;
+        align-content: space-around;
+  }
 }
 
 .wrapper1 {
@@ -494,7 +523,9 @@ body {
 }
 
 .rank {
-  width: calc(100% / 3);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
 }
 
@@ -593,6 +624,18 @@ body {
   position: relative;
   bottom: 20px;
   opacity: 0;
+}
+
+@media only screen and (max-width: 700px) {
+  .mastery__img {
+    width: 100px;
+  }
+  .mastery__text {
+    font-size: 14px;
+  }
+  .mastery__text--lvl {
+    font-size: 12px;
+  }
 }
 
 .match {
