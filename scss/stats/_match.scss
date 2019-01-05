@@ -39,3 +39,26 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 700px) {
+	.match {
+		width: 95%;
+		height: 150px;
+
+		&__img {
+			width: 100px;
+		}
+
+		&__text {
+			font-size: 12px;
+
+			&--champ {
+				font-size: 21px;
+			}
+
+			&--lane {
+				font-size: 18px;
+			}
+		}
+	}
+}

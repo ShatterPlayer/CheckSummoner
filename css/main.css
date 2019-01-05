@@ -559,7 +559,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80%;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
@@ -571,6 +571,15 @@ body {
 
 .rank--has-hover:hover .rank__overlay {
   opacity: 1;
+}
+
+@media only screen and (max-width: 700px) {
+  .rank__text {
+    font-size: 14px;
+  }
+  .rank__text--green, .rank__text--red, .rank__text--blue {
+    font-size: 12px;
+  }
 }
 
 .mastery {
@@ -628,13 +637,16 @@ body {
 
 @media only screen and (max-width: 700px) {
   .mastery__img {
-    width: 100px;
+    width: 80px;
   }
   .mastery__text {
     font-size: 14px;
   }
-  .mastery__text--lvl {
+  .mastery__text--lvl, .mastery__text--points {
     font-size: 12px;
+  }
+  .mastery__text--points {
+    bottom: 15px;
   }
 }
 
@@ -683,6 +695,25 @@ body {
 .match__text--time {
   color: #139a43;
   width: 160px;
+}
+
+@media only screen and (max-width: 700px) {
+  .match {
+    width: 95%;
+    height: 150px;
+  }
+  .match__img {
+    width: 100px;
+  }
+  .match__text {
+    font-size: 12px;
+  }
+  .match__text--champ {
+    font-size: 21px;
+  }
+  .match__text--lane {
+    font-size: 18px;
+  }
 }
 
 .line {

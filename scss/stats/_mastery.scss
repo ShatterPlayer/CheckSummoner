@@ -44,14 +44,19 @@
 @media only screen and (max-width: 700px) {
 	.mastery {
 		&__img {
-			width: 100px;
+			width: 80px;
 		}
 
 		&__text {
 			font-size: 14px;
 
-			&--lvl {
+			&--lvl,
+			&--points {
 				font-size: 12px;
+			}
+
+			&--points {
+				bottom: 15px;
 			}
 		}
 	}
