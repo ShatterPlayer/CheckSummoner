@@ -116,7 +116,7 @@ function success(res) {
 							'</span><span class="match__text match__text--lane">Lane: ' +
 							match.lane +
 							'</span></div><span class="match__text match__text--time">' +
-							timestamp_to_time_ago(match.timestamp) +
+							match.time +
 							"</span></div>";
 
 						$("#js-matchwrapper").html($("#js-matchwrapper").html() + newMatch);
@@ -154,7 +154,7 @@ function getStats() {
 	if (!gResp) error();
 
 	$.ajax({
-		url: "https://api.checksummoner.ml",
+		url: "https://checksummonerapi.000webhostapp.com/",
 		method: "POST",
 		dataType: "JSON",
 		data: {
