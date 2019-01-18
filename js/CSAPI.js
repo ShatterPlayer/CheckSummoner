@@ -68,15 +68,15 @@ function success(res) {
 
 				//Display league info
 				if (res.league) {
-					if (res.league.RANKED_FLEX_SR !== "undefined") {
+					if (res.league.RANKED_FLEX_SR) {
 						league(res.league.RANKED_FLEX_SR, 0);
 					}
 
-					if (typeof res.league.RANKED_SOLO_5x5 !== "undefined") {
+					if (res.league.RANKED_SOLO_5x5) {
 						league(res.league.RANKED_SOLO_5x5, 1);
 					}
 
-					if (typeof res.league.RANKED_FLEX_TT !== "undefined") {
+					if (res.league.RANKED_FLEX_TT) {
 						league(res.league.RANKED_FLEX_TT, 2);
 					}
 				}
