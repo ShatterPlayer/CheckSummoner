@@ -2,12 +2,22 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   background-color: #070707;
   cursor: default;
   overflow-x: hidden;
   position: relative;
   background-image: url("../img/stats_bg.png");
+}
+
+.blue {
+  color: #001f86;
+  font-weight: 900;
+}
+
+.red {
+  color: #bc0000;
+  font-weight: 900;
 }
 
 /* Global styles */
@@ -84,19 +94,82 @@ body {
   line-height: 5vh;
 }
 
-.footer__redtext {
-  color: #bc0000;
-  font-weight: 900;
-}
-
-.footer__bluetext {
-  color: #001f86;
-  font-weight: 900;
-}
-
 @media only screen and (max-width: 680px) {
   .footer {
     font-size: 12px;
+  }
+}
+
+.pageinfo {
+  position: fixed;
+  width: 450px;
+  height: 200px;
+  bottom: 100px;
+  right: -450px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 35px;
+  font-size: 0.9em;
+  background-color: white;
+  border-radius: 10px 0 0 0;
+  text-align: justify;
+  -webkit-transition: right 0.4s ease-in-out;
+  transition: right 0.4s ease-in-out;
+}
+
+.pageinfo__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+}
+
+.pageinfo::after {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 25px;
+  content: '\f12a';
+  position: absolute;
+  bottom: 0;
+  left: -50px;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+}
+
+.pageinfo:hover {
+  right: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  .pageinfo {
+    width: 300px;
+    right: -300px;
+    font-size: 0.8em;
+    padding: 22px;
+  }
+  .pageinfo::after {
+    right: 72px;
+    bottom: 13px;
   }
 }
 

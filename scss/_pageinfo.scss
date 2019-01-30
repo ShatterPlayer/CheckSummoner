@@ -1,0 +1,60 @@
+.pageinfo {
+  position: fixed;
+  width: 450px;
+  height: 200px;
+  bottom: 100px;
+  right: -450px;
+  box-sizing: border-box;
+  padding: 35px;
+  font-size: 0.9em;
+  background-color: white;
+  border-radius: 10px 0 0 0;
+  text-align: justify;
+  transition: right 0.4s ease-in-out;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 25px;
+    content: '\f12a';
+
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px 0 0 10px;
+  }
+
+  &:hover {
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .pageinfo {
+    width: 300px;
+    right: -300px;
+    font-size: 0.8em;
+    padding: 22px;
+
+    &::after {
+      right: 72px;
+      bottom: 13px;
+    }
+  }
+}

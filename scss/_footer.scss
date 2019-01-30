@@ -5,16 +5,6 @@
 	color: white;
 	text-align: center;
 	line-height: 5vh;
-
-	&__redtext {
-		color: $red;
-		font-weight: 900;
-	}
-
-	&__bluetext {
-		color: $blue;
-		font-weight: 900;
-	}
 }
 
 @media only screen and (max-width: 680px) {
