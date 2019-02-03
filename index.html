@@ -14,10 +14,10 @@
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script
-			async
+			defer
 			src="https://www.googletagmanager.com/gtag/js?id=UA-122734777-1"
 		></script>
-		<script>
+		<script defer>
 			var host = window.location.hostname;
 			if (host != "localhost") {
 				window.dataLayer = window.dataLayer || [];
@@ -68,11 +68,10 @@
 			src="js/form__server.js"
 			type="text/javascript"
 			async
-			defer
 		></script>
-		<script src="js/CSAPI.js" type="text/javascript"></script>
+		<script src="js/CSAPI.js" type="text/javascript" async></script>
 
-		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="https://www.google.com/recaptcha/api.js" async></script>
 
 		<!--Favicon-->
 		<link
@@ -166,6 +165,7 @@
 			data-fg="#ffffff"
 			data-link="#139a43"
 			data-divlinkbg="#139a43"
+			defer
 		></script>
 	</head>
 	<body onselectstart="return false">
