@@ -11,285 +11,201 @@
 	|____/ \__,_|_| |_| |_|_| |_| |_|\___/|_| |_|\___|_|
 -->
 <html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			defer
-			src="https://www.googletagmanager.com/gtag/js?id=UA-122734777-1"
-		></script>
-		<script defer>
-			var host = window.location.hostname;
-			if (host != "localhost") {
-				window.dataLayer = window.dataLayer || [];
-				function gtag() {
-					dataLayer.push(arguments);
-				}
-				gtag("js", new Date());
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122734777-1"
+    ></script>
+    <script defer>
+      var host = window.location.hostname
+      if (host != 'localhost') {
+        window.dataLayer = window.dataLayer || []
+        function gtag() {
+          dataLayer.push(arguments)
+        }
+        gtag('js', new Date())
 
-				gtag("config", "UA-122734777-1");
-			}
-		</script>
+        gtag('config', 'UA-122734777-1')
+      }
+    </script>
 
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-		<title>CheckSummoner - League of Legends Players Statistics</title>
-		<meta
-			name="description"
-			content="Check stats of League of Legends players from around the world - quickly and without any problems. CheckSummoner is an extremely easy to use page that allows you to check the statistics of a given player."
-		/>
-		<meta
-			name="keywords"
-			content="league, legends, lol, match, summoner, stats, check, summoner, checksummoner, ga, ml, ShatterPlayer, mastery, masteries, ranked"
-		/>
+    <title>CheckSummoner - League of Legends Players Statistics</title>
+    <meta
+      name="description"
+      content="Check stats of League of Legends players from around the world - quickly and without any problems. CheckSummoner is an extremely easy to use page that allows you to check the statistics of a given player."
+    />
+    <meta
+      name="keywords"
+      content="league, legends, lol, match, summoner, stats, check, summoner, checksummoner, ga, ml, ShatterPlayer, mastery, masteries, ranked"
+    />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" type="text/css" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 
-		<link
-			href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=latin-ext"
-			rel="stylesheet"
-		/>
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
 
-		<link
-			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-			integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-			crossorigin="anonymous"
-		/>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
 
-		<script
-			src="https://code.jquery.com/jquery-3.3.1.min.js"
-			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			crossorigin="anonymous"
-		></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
 
-		<script
-			src="js/form__server.js"
-			type="text/javascript"
-			async
-		></script>
-		<script src="js/CSAPI.js" type="text/javascript" async></script>
+    <script src="js/form__server.js" type="text/javascript" async></script>
+    <script src="js/main.js" type="text/javascript" async></script>
 
-		<script src="https://www.google.com/recaptcha/api.js" async></script>
+    <script src="https://www.google.com/recaptcha/api.js" async></script>
 
-		<!--Favicon-->
-		<link
-			rel="apple-touch-icon"
-			sizes="57x57"
-			href="img/favicon/apple-icon-57x57.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="60x60"
-			href="img/favicon/apple-icon-60x60.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="72x72"
-			href="img/favicon/apple-icon-72x72.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="76x76"
-			href="img/favicon/apple-icon-76x76.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="114x114"
-			href="img/favicon/apple-icon-114x114.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="120x120"
-			href="img/favicon/apple-icon-120x120.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="144x144"
-			href="img/favicon/apple-icon-144x144.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="152x152"
-			href="img/favicon/apple-icon-152x152.png"
-		/>
-		<link
-			rel="apple-touch-icon"
-			sizes="180x180"
-			href="img/favicon/apple-icon-180x180.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="192x192"
-			href="img/favicon/android-icon-192x192.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="32x32"
-			href="img/favicon/favicon-32x32.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="96x96"
-			href="img/favicon/favicon-96x96.png"
-		/>
-		<link
-			rel="icon"
-			type="image/png"
-			sizes="16x16"
-			href="img/favicon/favicon-16x16.png"
-		/>
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta
-			name="msapplication-TileImage"
-			content="img/favicon/ms-icon-144x144.png"
-		/>
-		<meta name="theme-color" content="#ffffff" />
-		<!-- -->
+    <meta name="theme-color" content="#070707" />
 
-		<meta
-			name="google-site-verification"
-			content="gK-OKD68hK0l62-SOFw7LsjCIIy4r_KMJnQNwPPS4IA"
-		/>
+    <script
+      type="text/javascript"
+      id="cookieinfo"
+      src="//cookieinfoscript.com/js/cookieinfo.min.js"
+      data-bg="#070707"
+      data-divlink="#070707"
+      data-fg="#ffffff"
+      data-link="#139a43"
+      data-divlinkbg="#139a43"
+      defer
+    ></script>
+  </head>
+  <body onselectstart="return false">
+    <header><div class="logo"></div></header>
 
-		<script
-			type="text/javascript"
-			id="cookieinfo"
-			src="//cookieinfoscript.com/js/cookieinfo.min.js"
-			data-bg="#070707"
-			data-divlink="#070707"
-			data-fg="#ffffff"
-			data-link="#139a43"
-			data-divlinkbg="#139a43"
-			defer
-		></script>
-	</head>
-	<body onselectstart="return false">
-		<header><div class="logo"></div></header>
+    <main>
+      <div class="paralax">
+        <h1 class="paralax__text fadein">
+          League of Legends Players Statistics
+        </h1>
+        <h1 class="paralax__text paralax__text--sub fadein-delay">
+          Straight from the official game servers
+        </h1>
+      </div>
 
-		<main>
-			<div class="paralax">
-				<h1 class="paralax__text fadein">
-					League of Legends Players Statistics
-				</h1>
-				<h1
-					class="paralax__text paralax__text--sub fadein-delay"
-				>
-					Straight from the official game servers
-				</h1>
-			</div>
+      <div class="params">
+        <h1 class="params__text">Summoner Details</h1>
 
-			<div class="params">
-				<h1 class="params__text">Summoner Details</h1>
+        <div class="params__flex-wrapper">
+          <div class="form">
+            <label>
+              <input
+                class="form__name"
+                type="text"
+                autocomplete="off"
+                placeholder="NAME"
+                onfocus="this.placeholder=''"
+                onblur="this.placeholder='NAME'"
+              />
+            </label>
 
-				<div class="params__flex-wrapper">
-					<div class="form">
-						<label>
-							<input
-								class="form__name"
-								type="text"
-								autocomplete="off"
-								placeholder="NAME"
-								onfocus="this.placeholder=''"
-								onblur="this.placeholder='NAME'"
-							/>
-						</label>
+            <label>
+              <div class="form__server">
+                <div class="form__caret-down"></div>
+              </div>
+            </label>
 
-						<label>
-							<div class="form__server">
-								<div class="form__caret-down"></div>
-							</div>
-						</label>
+            <label>
+              <button class="form__submit" onclick="submit()">CHECK!</button>
+            </label>
 
-						<label>
-							<button class="form__submit" onclick="submit()">CHECK!</button>
-						</label>
+            <div class="form__error"></div>
 
-						<div class="form__error"></div>
+            <div class="form__overlay"></div>
 
-						<div class="form__overlay"></div>
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc"
+              data-callback="getStats"
+              data-size="invisible"
+              data-error-callback="error"
+            ></div>
+          </div>
 
-						<div
-							class="g-recaptcha"
-							data-sitekey="6Le92XwUAAAAAMl_jkxFpJVlP50GqnJ6t_as2cTc"
-							data-callback="getStats"
-							data-size="invisible"
-							data-error-callback="error"
-						></div>
-					</div>
+          <div class="servers">
+            <div class="servers__item" data-server="NA" data-endpoint="na1">
+              North America
+            </div>
+            <div class="servers__item" data-server="EUNE" data-endpoint="eun1">
+              Europe North East
+            </div>
+            <div class="servers__item" data-server="EUW" data-endpoint="euw1">
+              Europe West
+            </div>
+            <div class="servers__item" data-server="OCE" data-endpoint="oc1">
+              Oceania
+            </div>
+            <div class="servers__item" data-server="LAN" data-endpoint="la1">
+              Latin America North
+            </div>
+            <div class="servers__item" data-server="LAS" data-endpoint="la2">
+              Latin America South
+            </div>
+            <div class="servers__item" data-server="BR" data-endpoint="br1">
+              Brazil
+            </div>
+            <div class="servers__item" data-server="JP" data-endpoint="jp1">
+              Japan
+            </div>
+            <div class="servers__item" data-server="KR" data-endpoint="kr">
+              Republic of Korea
+            </div>
+            <div class="servers__item" data-server="TR" data-endpoint="tr1">
+              Turkey
+            </div>
+            <div class="servers__item" data-server="RU" data-endpoint="ru">
+              Russia
+            </div>
+            <div class="servers__item" data-server="STOP">
+              <i class="fas fa-angle-right"></i>
+            </div>
+          </div>
 
-					<div class="servers">
-						<div class="servers__item" data-server="NA" data-endpoint="na1">
-							North America
-						</div>
-						<div class="servers__item" data-server="EUNE" data-endpoint="eun1">
-							Europe North East
-						</div>
-						<div class="servers__item" data-server="EUW" data-endpoint="euw1">
-							Europe West
-						</div>
-						<div class="servers__item" data-server="OCE" data-endpoint="oc1">
-							Oceania
-						</div>
-						<div class="servers__item" data-server="LAN" data-endpoint="la1">
-							Latin America North
-						</div>
-						<div class="servers__item" data-server="LAS" data-endpoint="la2">
-							Latin America South
-						</div>
-						<div class="servers__item" data-server="BR" data-endpoint="br1">
-							Brazil
-						</div>
-						<div class="servers__item" data-server="JP" data-endpoint="jp1">
-							Japan
-						</div>
-						<div class="servers__item" data-server="KR" data-endpoint="kr">
-							Republic of Korea
-						</div>
-						<div class="servers__item" data-server="TR" data-endpoint="tr1">
-							Turkey
-						</div>
-						<div class="servers__item" data-server="RU" data-endpoint="ru">
-							Russia
-						</div>
-						<div class="servers__item" data-server="STOP">
-							<i class="fas fa-angle-right"></i>
-						</div>
-					</div>
+          <img
+            class="params__image-left"
+            src="img/dariusblue.png"
+            alt="dariusblue"
+          />
+          <img
+            class="params__image-right"
+            src="img/dariusred.png"
+            alt="dariusred"
+          />
+        </div>
+      </div>
+    </main>
 
-					<img
-						class="params__image-left"
-						src="img/dariusblue.png"
-						alt="dariusblue"
-					/>
-					<img
-						class="params__image-right"
-						src="img/dariusred.png"
-						alt="dariusred"
-					/>
-				</div>
-			</div>
-		</main>
+    <footer>
+      <div class="footer">
+        <span class="red">Check</span><span class="blue">Summoner</span> &copy;
+        - League of Legends Players Statistics
+      </div>
+    </footer>
 
-		<footer>
-			<div class="footer">
-				<span class="red">Check</span
-				><span class="blue">Summoner</span> &copy; - League of
-				Legends Players Statistics
-			</div>
-		</footer>
+    <div class="pageinfo">
+      <span class="red">Check</span><span class="blue">Summoner</span> isn’t
+      endorsed by Riot Games and doesn’t reflect the views or opinions of Riot
+      Games or anyone officially involved in producing or managing League of
+      Legends. League of Legends and Riot Games are trademarks or registered
+      trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
+    </div>
+    <div class="change"></div>
 
-		<div class="pageinfo">
-				<span class="red">Check</span><span class="blue">Summoner</span> isn’t endorsed by Riot Games and doesn’t reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League of Legends © Riot Games, Inc.
-		</div>
-		<div class="change"></div>
-
-		<!-- <script>
+    <!-- <script>
 			$("main").load("stats.html");
 		</script> -->
-	</body>
+  </body>
 </html>
