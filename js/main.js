@@ -1,33 +1,3 @@
-function timestamp_to_time_ago(timestamp) {
-  var matchDate = new Date(timestamp);
-  var nowDate = new Date();
-  var diff = nowDate - matchDate;
-  var daysAgo = Math.floor(diff / 1000 / 60 / 60 / 24);
-  var hoursAgo = Math.floor((diff / 1000 / 60 / 60) % 24);
-  var minutesAgo = Math.floor((diff / 1000 / 60) % 60);
-
-  if (daysAgo >= 1) {
-    if (daysAgo == 1) return daysAgo + ' day ago';
-    else return daysAgo + ' days ago';
-  }
-
-  var hoursRes = '';
-  var minutesRes = '';
-  if (hoursAgo >= 1) {
-    if (hoursAgo == 1) hoursRes = hoursAgo + ' hour ';
-    else hoursRes = hoursAgo = hoursAgo + ' hours ';
-  }
-
-  if (minutesAgo >= 1) {
-    if (minutesAgo == 1) minutesRes = minutesAgo + ' minute ';
-    else minutesRes = minutesAgo + ' minutes ';
-  }
-
-  if (hoursRes == '' && minutesRes == '') return 'less than minute ago';
-
-  return hoursRes + '<br>' + minutesRes + 'ago';
-}
-
 function league(ranked, index) {
   $('#js-rimg' + index).attr(
     'src',
