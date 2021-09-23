@@ -124,7 +124,7 @@ function getStats() {
   if (!gResp) error();
 
   $.ajax({
-    url: 'https://checksummonerapi.000webhostapp.com/',
+    url: 'https://checksummoner.000webhostapp.com/',
     method: 'POST',
     dataType: 'JSON',
     data: {
